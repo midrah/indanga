@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="auth-page-wrapper"><div class="premium-login-card">
+        <button class="modal-close-trigger" id="closeLoginBtn">&times;</button>
+        
+        <div class="login-brand-header">
+            <h2>Welcome Back to INDANGA</h2>
+        </div>
+
+        <form class="premium-login-form" id="premiumLoginForm">
+            <div class="input-field-group">
+                <label for="loginEmail">Email Address</label>
+                <div class="input-with-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="loginEmail" placeholder="name@example.com" required>
+                </div>
+            </div>
+
+            <div class="input-field-group">
+                <div class="label-flex-row">
+                    <label for="loginPassword">Password</label>
+                    <a href="#" class="forgot-pass-link">Forgot?</a>
+                </div>
+                <div class="input-with-icon">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="loginPassword" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <div class="remember-me-row">
+                <label class="custom-checkbox-container">
+                    <input type="checkbox" checked>
+                    <span class="checkbox-checkmark"></span>
+                    Keep me signed in
+                </label>
+            </div>
+
+            <button type="submit" class="btn-premium-auth">
+                <span>Unlock Dashboard</span>
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </button>
+        </form>
+
+        <div class="login-card-footer">
+            <p>Don't have an account? <a href="#" class="switch-to-register-link">Get Started</a></p>
+        </div>
+    </div>
+</div>

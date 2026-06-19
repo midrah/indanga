@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDANGA | Client Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-body-wrapper">
+
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <button id="dashboardMenuToggle" class="hamburger-toggle-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <span class="brand-logo-text">INDANGA</span>
+            </div>
+            
+            <div class="header-search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search homes, hotels or cars...">
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-nav-btn">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="bell-dot">3</span>
+                </button>
+                <div class="user-profile-trigger">
+                    <span class="user-initials">JC</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="portal-layout-container">
+        
+        <aside class="portal-sidebar-navigation">
+            <nav class="sidebar-menu-links">
+                <a href="#" class="menu-link-item active">
+                    <i class="fa-solid fa-chart-pie"></i> <span>Dashboard</span>
+                </a>
+                <a href="#" class="menu-link-item">
+                    <i class="fa-solid fa-calendar-check"></i> <span>My Bookings</span>
+                </a>
+                <a href="#" class="menu-link-item">
+                    <i class="fa-solid fa-heart"></i> <span>My Favorites</span>
+                </a>
+                <a href="#" class="menu-link-item">
+                    <i class="fa-solid fa-envelope"></i> <span>Messages</span>
+                </a>
+                <a href="#" class="menu-link-item">
+                    <i class="fa-solid fa-credit-card"></i> <span>Payments</span>
+                </a>
+                <a href="#" class="menu-link-item">
+                    <i class="fa-solid fa-user-gear"></i> <span>Profile Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer-action">
+                <button id="portalLogoutBtn" class="btn-sidebar-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i> <span>Log Out</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="portal-main-workspace">
+            
+            <header class="workspace-welcome-row">
+                <div>
+                    <h1>Welcome back, <span class="user-name-placeholder">Ruvebana Didier</span> 👋</h1>
+                    <p>Here's what's happening with your account today.</p>
+                </div>
+                <a href="index.html" class="btn-yellow-action"><i class="fa-solid fa-arrow-left"></i> Return to Home</a>
+            </header>
+
+            <section class="portal-metrics-grid">
+                <div class="metric-summary-card">
+                    <div class="metric-icon blue-bg"><i class="fa-solid fa-suitcase"></i></div>
+                    <div class="metric-data">
+                        <h3>Total Bookings</h3>
+                        <span class="metric-number">12</span>
+                    </div>
+                </div>
+                <div class="metric-summary-card">
+                    <div class="metric-icon orange-bg"><i class="fa-solid fa-clock"></i></div>
+                    <div class="metric-data">
+                        <h3>Upcoming</h3>
+                        <span class="metric-number">4</span>
+                    </div>
+                </div>
+                <div class="metric-summary-card">
+                    <div class="metric-icon green-bg"><i class="fa-solid fa-square-check"></i></div>
+                    <div class="metric-data">
+                        <h3>Completed</h3>
+                        <span class="metric-number">8</span>
+                    </div>
+                </div>
+                <div class="metric-summary-card">
+                    <div class="metric-icon gold-bg"><i class="fa-solid fa-dollar-sign"></i></div>
+                    <div class="metric-data">
+                        <h3>Total Spent</h3>
+                        <span class="metric-number">$2,450</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="portal-split-layout">
+                
+                <section class="split-card-main">
+                    <div class="card-header-row">
+                        <h2>Upcoming Bookings</h2>
+                        <a href="#" class="view-all-link">View all</a>
+                    </div>
+                    
+                    <div class="booking-strip">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=150" alt="Hotel">
+                        <div class="strip-details">
+                            <h4>Kigali Marriott Hotel</h4>
+                            <p>Kigali, Rwanda • May 20, 2026</p>
+                        </div>
+                        <span class="status-pill status-confirmed">Confirmed</span>
+                    </div>
+
+                    <div class="booking-strip">
+                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=150" alt="Car">
+                        <div class="strip-details">
+                            <h4>Toyota RAV4 2022</h4>
+                            <p>Kigali, Rwanda • May 25, 2026</p>
+                        </div>
+                        <span class="status-pill status-confirmed">Confirmed</span>
+                    </div>
+
+                    <div class="booking-strip">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=150" alt="Apartment">
+                        <div class="strip-details">
+                            <h4>Modern Apartment</h4>
+                            <p>Kigali, Nyarutarama • Jun 01, 2026</p>
+                        </div>
+                        <span class="status-pill status-pending">Pending</span>
+                    </div>
+                </section>
+
+                <aside class="split-card-sidebar">
+                    <div class="quick-actions-card">
+                        <h2>Quick Actions</h2>
+                        <div class="actions-button-stack">
+                            <button><i class="fa-solid fa-hotel"></i> Book a Hotel</button>
+                            <button><i class="fa-solid fa-car"></i> Rent a Car</button>
+                            <button><i class="fa-solid fa-house"></i> Find a Home</button>
+                        </div>
+                    </div>
+
+                    <div class="recent-activity-card">
+                        <div class="card-header-row">
+                            <h2>Recent Activity</h2>
+                        </div>
+                        <div class="activity-timeline">
+                            <div class="activity-item-feed">
+                                <div class="activity-icon-circle green-text"><i class="fa-solid fa-circle-check"></i></div>
+                                <div class="activity-details">
+                                    <h4>Payment Successful</h4>
+                                    <p>Paid for Kigali Marriott Hotel</p>
+                                    <span class="activity-date">May 15, 2026</span>
+                                </div>
+                                <span class="activity-price">$360</span>
+                            </div>
+                            <div class="activity-item-feed">
+                                <div class="activity-icon-circle purple-text"><i class="fa-solid fa-bookmark"></i></div>
+                                <div class="activity-details">
+                                    <h4>Booking Confirmed</h4>
+                                    <p>Toyota RAV4 allocation ready</p>
+                                    <span class="activity-date">May 14, 2026</span>
+                                </div>
+                                <span class="activity-price">$225</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

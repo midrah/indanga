@@ -1,0 +1,1779 @@
+
+:root {
+    --mockup-dark-navy: #060919;
+    --mockup-deep-blue: #0b0e27;
+    --mockup-gold: #ffc107;
+    --mockup-gold-hover: #e0a800;
+    --mockup-text-muted: #9ca3af;
+    --mockup-text-dark: #111827;
+    --border-color-subtle: #f3f4f6;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--mockup-dark-navy);
+    color: var(--mockup-text-dark);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Mockup Metadata Indicator at top of page image */
+.top-tag-indicator {
+    background-color: #1e293b;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0.4rem 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ==========================================================================
+   HEADER NAVIGATION
+   ========================================================================== */
+.main-header {
+    background-color: var(--mockup-dark-navy);
+    padding: 1.5rem 0;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-icon {
+    color: var(--mockup-gold);
+    font-size: 1.25rem;
+}
+
+.navbar {
+    display: flex;
+    gap: 2.2rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   NAVBAR SPLIT AUTH BUTTONS
+   ========================================================================== */
+.navbar-auth-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Even spacing between Log In and Sign Up */
+}
+
+/* Minimalist elegant link style for Log In */
+.btn-nav-login {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.btn-nav-login:hover {
+    color: var(--mockup-gold, #fbbf24);
+}
+
+/* Premium attention-grabbing CTA for Sign Up */
+.btn-nav-signup {
+    background-color: var(--mockup-gold, #fbbf24);
+    color: #0c0e29; /* Matches your dashboard navy brand color */
+    border: none;
+    padding: 0.65rem 1.35rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-nav-signup:hover {
+    background-color: #f59e0b; /* Slightly darker gold on hover */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.2);
+}
+
+.hero-gateway-section {
+    position: relative;
+    padding: 8rem 2rem 12rem 2rem;
+    width: 100%;
+    display: flex;
+    min-height: 65vh;
+    align-items: center;
+    padding: 6rem 0 12 rem 0;
+    z-index: 5;
+    
+    /* The magic combo: Dark overlay gradient on the left, blending into your villa image */
+    background: linear-gradient(to right, 
+        rgba(3, 5, 17, 0.95) 30%, 
+        rgba(3, 5, 17, 0.6) 60%, 
+        rgba(3, 5, 17, 0.2) 100%), 
+        url('images/Background-photo.jpg');
+    
+    background-size: cover;
+    background-attachment: scroll; /* Keeps loading highly performant */
+    overflow: hidden;
+}
+
+/* Container limits layout boundaries */
+.hero-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content safely over the dark left gradient */
+    width: 100%;
+}
+
+.hero-text-column {
+    max-width: 620px; /* Prevents text from stretching across the entire villa view */
+    z-index: 100;
+    max-width: 620px;
+}
+
+.hero-text-column h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-text-column p {
+    font-size: 1.15rem;
+    color: #cbd5e1; 
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.hero-cta-button-row {
+    display: flex;
+    gap: 1.25rem;
+    position: relative;
+    z-index: 101;
+}
+
+/* Quick responsive fix for mobile devices */
+@media (max-width: 768px) {
+    .hero-gateway-section {
+        background: linear-gradient(to bottom, 
+            rgba(3, 5, 17, 0.95) 60%, 
+            rgba(3, 5, 17, 0.7) 100%), 
+            url('images/Background-photo.jpg') no-repeat center center;
+        background-size: cover;
+        text-align: center;
+        padding: 4rem 0;
+    }
+    
+    .hero-content-wrapper {
+        justify-content: center;
+    }
+    
+    .hero-text-column h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-cta-button-row {
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+.btn-explore-now {
+    background-color: var(--mockup-gold);
+    color: var(--mockup-dark-navy);
+    border: none;
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-play-how {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+/* High-End Architectural Photo Mockup Box matching the graphic directly */
+.mockup-house-image {
+    width: 100%;
+    height: 420px;
+    border-radius: 12px;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), 
+                url('images/Background-photo.jpg') center/cover no-repeat;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ==========================================================================
+   WHITE CONTAINER WRAPPER (Creates the iconic mockup clean visual cutoff)
+   ========================================================================== */
+.white-body-wrapper {
+    background-color: #fff;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-top: -4rem;
+    position: relative;
+    z-index: 10;
+    padding-top: 0.1rem;
+}
+/* ==========================================================================
+   SOLID WHITE CARD STRUCTURE OVERRIDE
+   ========================================================================== */
+/* ==========================================================================
+   INDANGA HERO SEARCH ENGINE CARD FIXED LAYOUT
+   ========================================================================== */
+
+/* 1. The Main White Floating Container Card */
+.search-module-card {
+    background: #ffffff !important;   /* Forces the card background back to solid white */
+    background-color: #ffffff !important;
+    border-radius: 16px;
+    padding: 2.25rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    position: relative;
+    z-index: 10;                     /* Places it over the dark background section */
+    width: 100%;
+    max-width: 1140px;               /* Matches modern luxury interface standards */
+    margin: -50px auto 0 auto;       /* Pulls the card slightly up into the hero segment */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-sizing: border-box;
+}
+
+/* 2. The Compact Tabs Row Layout */
+.search-tabs-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    border-bottom: 2px solid #f1f5f9; /* Soft gray background line */
+    padding-bottom: 0.75rem;
+    width: max-content;              /* Keeps the container small and elegant */
+}
+
+.search-tab {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #94a3b8;                 /* Muted gray text color so it remains visible but low profile */
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;                     /* Space between icons and words */
+    transition: color 0.2s ease;
+    user-select: none;
+}
+
+.search-tab:hover {
+    color: #0c0e29;                 /* Turns deep corporate navy on mouse hover */
+}
+
+/* The Active Mode Highlighter rules */
+.search-tab.active {
+    color: #fbbf24 !important;      /* Transforms text to active gold */
+    font-weight: 700;
+}
+
+.search-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.88rem;               /* Fits directly on top of the gray baseline */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fbbf24;       /* Gold underline stripe */
+    border-radius: 2px;
+}
+
+/* 3. The Inputs Row Grid alignment */
+.search-inputs-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;          /* Align inputs cleanly with the search button baseline */
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.input-group-block {
+    flex: 1;                        /* Allocates uniform width to the layout blocks */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Fix Input Field Titles / Labels */
+.input-group-block label {
+    color: #475569 !important;      /* Changes label text to an easily legible dark charcoal gray */
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Style Inputs & Select Forms */
+.input-group-block input,
+.input-group-block select {
+    width: 100%;
+    height: 48px;                   /* Unified spatial scaling */
+    padding: 0 1rem;
+    background-color: #f8fafc;       /* Gentle gray input field background */
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #0f172a;
+    font-size: 0.92rem;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* 4. Executive Navy Action Button Alignment */
+.btn-search-trigger {
+    background-color: #0c0e29;
+    color: #ffffff;
+    height: 48px;
+    padding: 0 2.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-search-trigger:hover {
+    background-color: #fbbf24;
+    color: #0c0e29;
+}
+
+.search-inputs-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+.inputs-form-row {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 1.2fr auto;
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+.form-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form-field-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #9ca3af;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputs-form-row input, 
+.inputs-form-row select {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 0.95rem;
+    color: #64748b;
+    outline: none;
+    appearance: none;
+}
+
+.field-end-icon {
+    position: absolute;
+    right: 1.2rem;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper::after {
+    content: '\f107';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    pointer-events: none;
+}
+
+.form-submit-btn {
+    background-color: var(--mockup-deep-blue);
+    color: #fff;
+    border: none;
+    padding: 0.9rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-submit-btn:hover {
+    background-color: var(--mockup-dark-navy);
+}
+
+/* ==========================================================================
+   VERTICAL MODULES (EVERYTHING YOU NEED)
+   ========================================================================== */
+.verticals-showcase-section {
+    padding: 2rem 0 4rem 0;
+}
+
+.main-section-heading {
+    font-size: 2.3rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--mockup-dark-navy);
+    margin-bottom: 3rem;
+}
+
+.heading-gold {
+    color: var(--mockup-gold-hover);
+}
+
+.three-column-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.vertical-card {
+    background-color: #fff;
+    border: 1px solid #f3f4f6;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+}
+
+.card-icon-box {
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* The subtle background boxes from the image layout */
+.box-green { background-color: #f0fdf4; color: #10b981; }
+.box-pink { background-color: #fdf2f8; color: #ec4899; }
+.box-blue { background-color: #f0f9ff; color: #0ea5e9; }
+
+.vertical-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--mockup-dark-navy);
+    margin-bottom: 0.75rem;
+}
+
+.vertical-card p {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.card-action-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ==========================================================================
+   WHY CHOOSE INDANGA PILLARS
+   ========================================================================== */
+.value-pillars-section {
+    padding: 5rem 0;
+}
+
+.centered-section-heading {
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--mockup-dark-navy);
+    margin-bottom: 4rem;
+}
+
+.three-column-grid, .four-column-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.pillar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pillar-icon {
+    font-size: 1.8rem;
+    color: #10b981;
+    margin-bottom: 0.5rem;
+}
+
+.pillar-item h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--mockup-dark-navy);
+}
+
+.pillar-item p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   ACTION GATEWAY BANNER MODULE
+   ========================================================================== */
+.gateway-banner-section {
+    padding: 2rem 0 5rem 0;
+}
+
+.dark-gateway-banner {
+    background-color: var(--mockup-deep-blue);
+    border-radius: 14px;
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gateway-text-wrapper h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.gateway-text-wrapper p {
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+.gateway-cta-btn {
+    background-color: var(--mockup-gold);
+    color: var(--mockup-dark-navy);
+    border: none;
+    padding: 0.9rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   APP FOOTER LAYOUT
+   ========================================================================== */
+.app-footer {
+    background-color: #030511;
+    padding: 5rem 0 2rem 0;
+    color: #9ca3af;
+}
+
+.footer-columns-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.footer-brand-column .footer-logo {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-pitch {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    max-width: 250px;
+}
+
+.footer-nav-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.footer-nav-column h5 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.footer-nav-column a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-nav-column a:hover {
+    color: #fff;
+}
+
+.social-icon-row {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.social-icon-row a {
+    color: #9ca3af;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.social-icon-row a:hover {
+    color: #fff;
+}
+
+.footer-bottom-meta-row {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+}
+
+.heart-icon {
+    color: #ef4444;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM OVERRIDES
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+    .hero-subtext { margin: 0 auto 2.5rem auto; }
+    .hero-button-row { justify-content: center; }
+    .inputs-form-row { grid-template-columns: 1fr; }
+    .form-submit-btn { width: 100%; }
+    .three-column-grid { grid-template-columns: 1fr; }
+    .four-column-grid { grid-template-columns: 1fr 1fr; }
+    .dark-gateway-banner { flex-direction: column; text-align: center; gap: 2rem; }
+    .footer-columns-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+    .navbar { display: none; }
+    .hero-text-area h1 { font-size: 2.4rem; }
+    .four-column-grid { grid-template-columns: 1fr; }
+    .footer-columns-grid { grid-template-columns: 1fr; }
+    .footer-bottom-meta-row { flex-direction: column; align-items: center; gap: 1rem; }
+}
+/* ==========================================================================
+   AUTHENTICATION POPUP MODAL STYLES
+   ========================================================================== */
+.auth-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 5, 17, 0.7);
+    backdrop-filter: blur(8px);
+}
+
+.modal-container {
+    position: relative;
+    background-color: var(--mockup-deep-blue);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 90%;
+    max-width: 440px;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    color: #fff;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    z-index: 2010;
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    color: var(--mockup-text-muted);
+    font-size: 1.75rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+    color: #fff;
+}
+
+.modal-header-content h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.modal-header-content p {
+    color: var(--mockup-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+.modal-form .form-field-group {
+    margin-bottom: 1.25rem;
+}
+
+.modal-form .form-field-group label {
+    color: #dfe2e6;
+    margin-bottom: 0.4rem;
+}
+
+.modal-form input {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.modal-form input:focus {
+    border-color: var(--mockup-gold);
+}
+
+.modal-action-btn {
+    background-color: var(--mockup-gold);
+    color: var(--mockup-dark-navy);
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.modal-action-btn:hover {
+    background-color: var(--mockup-gold-hover);
+}
+
+.modal-divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.modal-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.modal-divider span {
+    background-color: var(--mockup-deep-blue);
+    padding: 0 0.75rem;
+    color: var(--mockup-text-muted);
+    font-size: 0.8rem;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-google-auth {
+    width: 100%;
+    background-color: #fff;
+    color: #1f2937;
+    border: none;
+    padding: 0.85rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: background-color 0.2s;
+}
+
+.btn-google-auth:hover {
+    background-color: #f3f4f6;
+}
+
+.btn-google-auth img {
+    width: 18px;
+    height: 18px;
+}
+
+.modal-switch-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--mockup-text-muted);
+    margin-top: 1.5rem;
+}
+
+.modal-switch-text a {
+    color: var(--mockup-gold);
+    font-weight: 600;
+    text-decoration: none;
+}
+.modal-switch-text a:hover {
+    text-decoration: underline;
+}
+/* ==========================================================================
+   INDANGA DASHBOARD PREMIUM STYLES
+   ========================================================================== */
+.indanga-portal-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: sans-serif;
+}
+
+/* Sidebar configuration */
+.portal-sidebar {
+    width: 260px;
+    background-color: #0c0e29; 
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.25rem;
+}
+
+.sidebar-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover, .menu-item.active {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+/* Recent Activity Card Formatting */
+.recent-activity-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid #f1f5f9;
+}
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #f8fafc;
+}
+.activity-icon-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+}
+.green-text { color: #22c55e; background: #f0fdf4; }
+.purple-text { color: #a855f7; background: #faf5ff; }
+.activity-details h4 { font-size: 0.9rem; font-weight: 700; color: #0f172a; }
+.activity-details p { font-size: 0.8rem; color: #64748b; margin: 0.15rem 0; }
+.activity-date { font-size: 0.75rem; color: #94a3b8; }
+.activity-price { margin-left: auto; font-size: 0.9rem; font-weight: 700; color: #0f172a; }
+
+/* Refer & Earn Corporate Banner Layout */
+.refer-earn-banner {
+    background: linear-gradient(135deg, #0c0e29 0%, #1a1d4a 100%);
+    border-radius: 16px;
+    padding: 2.5rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.refer-content h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+.refer-content p { color: #cbd5e1; font-size: 0.95rem; margin-bottom: 1.25rem; max-width: 500px; }
+.btn-refer-action {
+    background-color: #fbbf24;
+    color: #0c0e29;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.btn-refer-action:hover { transform: scale(1.03); }
+
+.badge-count {
+    background-color: var(--mockup-gold, #fbbf24);
+    color: #0c0e29;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    margin-left: auto;
+}
+
+.sidebar-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.5rem;
+}
+
+.btn-portal-logout {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+}
+
+/* Main Dashboard Canvas Layout */
+.portal-main-canvas {
+    flex-grow: 1;
+    padding: 2.5rem;
+    overflow-y: auto;
+}
+
+.portal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.welcome-banner h1 { font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 0.25rem; }
+.welcome-banner p { color: #64748b; font-size: 0.95rem; }
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.notification-bell {
+    position: relative;
+    font-size: 1.35rem;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.bell-dot {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #ef4444;
+    color: #fff;
+    font-size: 0.65rem;
+    padding: 0.1rem 0.3rem;
+    border-radius: 50%;
+}
+
+.user-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e2e8f0;
+}
+
+/* Metrics Cards Row styles */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.metric-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metric-label { font-size: 0.85rem; color: #64748b; font-weight: 500; }
+.metric-info h3 { font-size: 1.75rem; font-weight: 800; margin-top: 0.25rem; color: #0f172a; }
+
+.metric-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+}
+.metric-icon.blue-bg { background: #eff6ff; color: #3b82f6; }
+.metric-icon.orange-bg { background: #fff7ed; color: #f97316; }
+.metric-icon.green-bg { background: #f0fdf4; color: #22c55e; }
+.metric-icon.gold-bg { background: #fefce8; color: #eab308; }
+
+/* Dynamic Layout Splits */
+.portal-split-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.split-card-main, .quick-actions-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid #f1f5f9;
+}
+
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.view-all-link { color: #3b82f6; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+
+/* Booking Card Rows */
+.booking-strip {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+.booking-strip:last-child { border: none; }
+
+.booking-strip img { width: 60px; height: 50px; border-radius: 8px; object-fit: cover; }
+.strip-details h4 { font-size: 0.95rem; font-weight: 700; color: #0f172a; }
+.strip-details p { font-size: 0.85rem; color: #64748b; }
+
+.status-pill {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+}
+.status-confirmed { background-color: #dcfce7; color: #15803d; }
+.status-pending { background-color: #fef3c7; color: #b45309; }
+
+/* Action stack columns */
+.actions-button-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.actions-button-stack button {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: background 0.2s;
+}
+.actions-button-stack button:hover { background: #f8fafc; }
+
+/* ==========================================================================
+   INDANGA Ddashboard SYNCHRONIZED BRANDING RULES
+   ========================================================================== */
+
+/* Header layout mapping original layout */
+.app-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1rem 2.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.brand-logo-text {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #0c0e29;
+    letter-spacing: 0.5px;
+}
+.hamburger-toggle-btn {
+    background: none;
+    border: none;
+    color: #0c0e29;
+    font-size: 1.35rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.hamburger-toggle-btn:hover {
+    background-color: #f1f5f9;
+}
+.header-search-bar {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 100px;
+    padding: 0.6rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 400px;
+}
+
+.header-search-bar i {
+    color: #94a3b8;
+}
+
+.header-search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #0f172a;
+    font-size: 0.9rem;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icon-nav-btn {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: #475569;
+    cursor: pointer;
+    position: relative;
+}
+
+.user-profile-trigger {
+    width: 40px;
+    height: 40px;
+    background-color: #f1f5f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.user-initials {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #0c0e29;
+}
+
+/* Structural Overrides to include Top Nav */
+.portal-layout-container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: calc(100vh - 73px);
+}
+
+.workspace-welcome-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.workspace-welcome-row h1 {
+    margin: 0 0 0.25rem 0;
+    color: #0c0e29;
+    font-size: 1.75rem;
+}
+
+.workspace-welcome-row p {
+    margin: 0;
+    color: #64748b;
+}
+
+/* Premium Yellow Button Style from Mockup */
+.btn-yellow-action {
+    background-color: #fbbf24;
+    color: #0c0e29;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.btn-yellow-action:hover {
+    background-color: #d97706;
+    color: #ffffff;
+}
+
+/* Homepage Category Card Styling Integration */
+.dashboard-categories-section {
+    margin-bottom: 3rem;
+}
+
+.dashboard-categories-section h2 {
+    font-size: 1.25rem;
+    color: #0c0e29;
+    margin-bottom: 1.25rem;
+}
+
+.categories-grid-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.category-panel-card {
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 160px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card-image-bg {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.card-info-content h3 {
+    color: #ffffff;
+    margin: 0 0 0.25rem 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.card-info-content p {
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    font-size: 0.85rem;
+}
+body.dashboard-body-wrapper {
+    background-color: #f8fafc !important; 
+    background: #f8fafc !important;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fix the master container layout */
+.portal-layout-container {
+    display: flex !important; /* Switched to flex to guarantee side-by-side behavior */
+    flex-direction: row !important;
+    min-height: calc(100vh - 73px);
+    width: 100%;
+}
+
+/* Re-style the sidebar completely to keep it isolated on the left */
+.portal-sidebar-navigation {
+    width: 260px !important;
+    min-width: 260px !important;
+    background-color: #0c0e29 !important; /* Deep luxury navy bar */
+    padding: 2rem 1.5rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+/* Fix raw purple link appearance in the sidebar */
+.sidebar-menu-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+}
+
+.menu-link-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    color: #94a3b8 !important; /* Silver gray link text */
+    text-decoration: none !important;
+    padding: 0.85rem 1rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+}
+
+.menu-link-item:hover, .menu-link-item.active {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Ensure the main dashboard panel content is perfectly white and readable */
+.portal-main-workspace {
+    flex-grow: 1 !important;
+    background-color: #f8fafc !important; /* Light slate grey background */
+    padding: 2.5rem 3rem !important;
+}
+
+/* Force headings to stand out crisp and dark */
+.workspace-welcome-row h1,
+.portal-feed-segment h2,
+.dashboard-categories-section h2 {
+    color: #0c0e29 !important; /* High-contrast navy text */
+}
+
+.workspace-welcome-row p {
+    color: #475569 !important; /* Readable description gray */
+}
+/* ==========================================================================
+   INDANGA MARKETPLACE LISTINGS GRID SYSTEM
+   ========================================================================== */
+.indanga-marketplace-section {
+    padding: 5rem 2rem;
+    background-color: #f8fafc;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.marketplace-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+}
+
+.pill-accent {
+    background-color: rgba(12, 14, 41, 0.05);
+    color: #0c0e29;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.section-title-block h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0c0e29;
+    margin-top: 0.5rem;
+}
+
+.section-title-block p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+/* Listings Grid Config */
+.listings-display-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
+.listing-item-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.listing-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card-media-wrapper {
+    position: relative;
+    height: 220px;
+    width: 100%;
+}
+.card-media-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+.tag-premium { background-color: #0c0e29; color: #fff; }
+.tag-available { background-color: #dcfce7; color: #15803d; }
+
+.btn-card-favorite {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #ffffff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: color 0.2s;
+}
+.btn-card-favorite:hover { color: #ef4444; }
+
+.card-content-body {
+    padding: 1.5rem;
+}
+
+.card-location-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+.card-rating {
+    color: #eab308;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 700;
+}
+
+.card-content-body h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-footer-pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1.25rem;
+}
+
+.price-amount { font-size: 1.4rem; font-weight: 800; color: #0c0e29; }
+.price-unit { font-size: 0.85rem; color: #64748b; font-weight: 500; }
+
+.btn-card-action-trigger {
+    background-color: #0c0e29;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-card-action-trigger:hover { background-color: #fbbf24; color: #0c0e29; }
+/* Live Booking Feed Entry Animation */
+@keyframes slideInFade {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ==========================================================================
+   INDANGA HAMBURGER ACCESSIBLE CLIENT PORTAL DESIGNS
+   ========================================================================== */
+
+/* Layout Framework Overrides */
+html body .portal-layout-container {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+}
+
+html body .portal-main-workspace {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 2.5rem 2rem !important;
+    box-sizing: border-box !important;
+    background-color: #f8fafc !important;
+}
+
+/* Force Hidden Left Sidebar Panel Drawer */
+html body .portal-sidebar-navigation {
+    position: fixed !important;
+    top: 73px !important;
+    left: -280px !important; /* Kept completely out of sight until toggled */
+    width: 260px !important;
+    height: calc(100vh - 73px) !important;
+    background-color: #0c0e29 !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    padding: 2rem 1.5rem !important;
+    box-sizing: border-box;
+}
+
+html body .portal-sidebar-navigation.active {
+    left: 0 !important; /* Slide straight out on hamburger action click */
+}
+
+/* Header Bell Count Accent Dot styling */
+.icon-nav-btn { position: relative; }
+.bell-dot {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.65rem;
+    padding: 1px 5px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+/* Metrics Dashboard Summaries Mapping */
+.portal-metrics-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 1.5rem !important;
+    margin-bottom: 2.5rem !important;
+}
+
+.blue-bg { background-color: #e0f2fe; color: #0284c7; }
+.orange-bg { background-color: #ffedd5; color: #ea580c; }
+.green-bg { background-color: #dcfce7; color: #16a34a; }
+.gold-bg { background-color: #fef3c7; color: #d97706; }
+
+/* Workspace Layout Split Columns */
+.portal-split-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.split-card-main, .quick-actions-card, .recent-activity-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-header-row h2 { font-size: 1.15rem; color: #0c0e29; margin: 0; }
+.view-all-link { color: #fbbf24; font-weight: 700; font-size: 0.88rem; text-decoration: none; }
+
+/* Booking Data Strip Panels */
+.booking-strip {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.booking-strip img { width: 56px; height: 56px; border-radius: 8px; object-fit: cover; }
+.strip-details { flex-grow: 1; }
+.strip-details h4 { margin: 0 0 0.25rem 0; font-size: 0.95rem; color: #0c0e29; }
+.strip-details p { margin: 0; font-size: 0.85rem; color: #64748b; }
+
+.status-pill { padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem; font-weight: 700; }
+.status-confirmed { background-color: #dcfce7; color: #15803d; }
+.status-pending { background-color: #fef3c7; color: #b45309; }
+
+/* Quick Actions Button Stack Architecture */
+.actions-button-stack { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
+.actions-button-stack button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 0.85rem 1.25rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #475569;
+    text-align: left;
+    transition: all 0.2s;
+}
+.actions-button-stack button:hover { background-color: #0c0e29; color: #ffffff; border-color: #0c0e29; }
+
+/* Activity System Timeline Item Feed Elements */
+.activity-item-feed {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+.activity-icon-circle { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background-color: #f8fafc; }
+.green-text { color: #16a34a; }
+.purple-text { color: #a855f7; }
+.activity-price { font-weight: 700; color: #0c0e29; font-size: 0.9rem; }

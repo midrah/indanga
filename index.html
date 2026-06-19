@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDANGA — One Platform. Endless Possibilities.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-shapes logo-icon"></i> INDANGA
+            </a>
+            <nav class="navbar">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">Explore</a>
+                <a href="#" class="nav-link">About Us</a>
+                <a href="#" class="nav-link">How it Works</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+            <div class="navbar-auth-actions">
+            <a href="#" class="btn-nav-login" id="navLoginBtn">Log In</a>
+            <button class="btn-nav-signup" id="navSignupBtn">Sign Up</button>
+        </div>
+    </header>
+
+   <section class="hero-gateway-section">
+    <div class="container hero-content-wrapper">
+        <div class="hero-text-column">
+            <h1>One Platform.<br>Endless Possibilities.<br><span class="highlight-gold">Your Journey, Simplified.</span></h1>
+            <p>Find your next home, book the perfect hotel, or rent a car – all in one place.</p>
+            
+            <div class="hero-cta-button-row">
+                <button class="btn-explore-now">Explore Now</button>
+                <button class="btn-how-it-works">How It Works</button>
+                </div>
+            </div>
+            <div class="hero-image-area">
+                <div class="mockup-house-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="search-module-card">
+
+    <div class="search-tabs-container">
+        <div class="search-tab active" data-target="homes">
+            <i class="fa-solid fa-house"></i> Homes
+        </div>
+        <div class="search-tab" data-target="hotels">
+            <i class="fa-solid fa-hotel"></i> Hotels
+        </div>
+        <div class="search-tab" data-target="cars">
+            <i class="fa-solid fa-car"></i> Cars
+        </div>
+    </div>
+                
+                <div class="inputs-form-row">
+                    <div class="form-field-group">
+                        <label>Location</label>
+                        <div class="input-with-icon">
+                            <input type="text" placeholder="Where are you going?">
+                            <i class="fa-regular fa-heart field-end-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-field-group">
+                        <label>Type</label>
+                        <div class="select-wrapper">
+                            <select id="typeSelect">
+                            <option>All Types</option>
+                            <option>Apartment</option>
+                            <option>Villa</option>
+                            <option>Townhouse</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-field-group">
+                        <label>Budget</label>
+                        <div class="select-wrapper">
+                        <select id="budgetSelect">
+                        <option>Any Budget</option>
+                        <option>Under 500k RWF</option>
+                        <option>500k - 1.5M RWF</option>
+                        <option>1.5M+ RWF</option>  
+                            
+                            </select>
+                        </div>
+                    </div>
+                    <button class="form-submit-btn">Search</button>
+                </div>
+            </div>
+        </div>
+        <section class="indanga-marketplace-section" id="marketplaceSection">
+    <div class="section-container">
+        
+        <div class="marketplace-header-row">
+            <div class="section-title-block">
+                <span class="pill-accent">Explore Rwanda</span>
+                <h2 id="marketplaceTitle">Featured Accommodations</h2>
+                <p id="marketplaceSubtitle">Discover verified properties, premier luxury suites, and boutique homes across Rwanda.</p>
+            </div>
+            <div class="filter-controls-row">
+                <button class="btn-grid-filter active"><i class="fa-solid fa-sliders"></i> Filter</button>
+            </div>
+        </div>
+
+        <div class="listings-display-grid" id="listingsGridContainer">
+            <div class="listing-item-card" data-category="hotels">
+                <div class="card-media-wrapper">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600" alt="Kigali Marriott Hotel">
+                    <span class="badge-tag tag-premium">Premium</span>
+                    <button class="btn-card-favorite"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="card-content-body">
+                    <div class="card-location-row">
+                        <span><i class="fa-solid fa-location-dot"></i> Kigali, KN 3 Ave</span>
+                        <span class="card-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                    </div>
+                    <h3>Kigali Marriott Hotel</h3>
+                    <p class="card-description">Experience World-class service with elegant rooms, a luxury spa, and outdoor swimming options in the heart of Kigali.</p>
+                    <div class="card-footer-pricing">
+                        <div class="pricing-block">
+                            <span class="price-amount">$360</span>
+                            <span class="price-unit">/ night</span>
+                        </div>
+                        <button class="btn-card-action-trigger btn-book-listing">Book Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="listing-item-card" data-category="cars">
+                <div class="card-media-wrapper">
+                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=600" alt="Toyota RAV4">
+                    <span class="badge-tag tag-available">Instant Book</span>
+                    <button class="btn-card-favorite"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="card-content-body">
+                    <div class="card-location-row">
+                        <span><i class="fa-solid fa-car-side"></i> SUV • Automatic</span>
+                        <span class="card-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                    </div>
+                    <h3>Toyota RAV4 2022</h3>
+                    <p class="card-description">Four-wheel drive variant, ideal for both city cruising and countryside tracking across Akagera or Volcanoes park trails.</p>
+                    <div class="card-footer-pricing">
+                        <div class="pricing-block">
+                            <span class="price-amount">$45</span>
+                            <span class="price-unit">/ day</span>
+                        </div>
+                        <button class="btn-card-action-trigger btn-book-listing">Rent Car</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="listing-item-card" data-category="homes">
+                <div class="card-media-wrapper">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=600" alt="Nyarutarama Villa">
+                    <span class="badge-tag tag-premium">Verified</span>
+                    <button class="btn-card-favorite"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="card-content-body">
+                    <div class="card-location-row">
+                        <span><i class="fa-solid fa-location-dot"></i> Kigali, Nyarutarama</span>
+                        <span class="card-rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                    </div>
+                    <h3>Modern Luxury Apartment</h3>
+                    <p class="card-description">Fully furnished 3-bedroom luxury residential estate featuring modern appliances, high-speed fiber internet, and standard 24/7 security.</p>
+                    <div class="card-footer-pricing">
+                        <div class="pricing-block">
+                            <span class="price-amount">$650</span>
+                            <span class="price-unit">/ month</span>
+                        </div>
+                        <button class="btn-card-action-trigger btn-book-listing">Find Home</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <section class="verticals-showcase-section">
+            <div class="container">
+                <h2 class="main-section-heading">Everything You Need<br>In <span class="heading-gold">One</span> Platform</h2>
+                
+                <div class="three-column-grid">
+                    <div class="vertical-card">
+                        <div class="card-icon-box box-green">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <h3>Find Homes</h3>
+                        <p>Discover verified properties and connect with trusted agents.</p>
+                        <a href="#" class="card-action-link color-green">Explore Homes <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                    
+                    <div class="vertical-card">
+                        <div class="card-icon-box box-pink">
+                            <i class="fa-regular fa-building"></i>
+                        </div>
+                        <h3>Book Hotels</h3>
+                        <p>Book amazing hotels with the best prices and secure your stay.</p>
+                        <a href="#" class="card-action-link color-pink">Explore Hotels <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                    
+                    <div class="vertical-card">
+                        <div class="card-icon-box box-blue">
+                            <i class="fa-solid fa-car-side"></i>
+                        </div>
+                        <h3>Rent Cars</h3>
+                        <p>Rent self-drive cars easily and enjoy the freedom to move.</p>
+                        <a href="#" class="card-action-link color-blue">Explore Cars <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="value-pillars-section">
+            <div class="container">
+                <h2 class="centered-section-heading">Why Choose INDANGA?</h2>
+                
+                <div class="four-column-grid">
+                    <div class="pillar-item">
+                        <div class="pillar-icon"><i class="fa-regular fa-circle-check"></i></div>
+                        <h4>Trusted & Verified</h4>
+                        <p>All listings are verified for your safety.</p>
+                    </div>
+                    <div class="pillar-item">
+                        <div class="pillar-icon"><i class="fa-solid fa-wallet"></i></div>
+                        <h4>Secure Payments</h4>
+                        <p>Pay securely through our trusted payment system.</p>
+                    </div>
+                    <div class="pillar-item">
+                        <div class="pillar-icon"><i class="fa-solid fa-tags"></i></div>
+                        <h4>Best Prices</h4>
+                        <p>We offer competitive prices with great value.</p>
+                    </div>
+                    <div class="pillar-item">
+                        <div class="pillar-icon"><i class="fa-solid fa-headset"></i></div>
+                        <h4>24/7 Support</h4>
+                        <p>We are here to help you anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gateway-banner-section">
+            <div class="container">
+                <div class="dark-gateway-banner">
+                    <div class="gateway-text-wrapper">
+                        <h3>Start Your Journey Today</h3>
+                        <p>Join thousands of happy customers who trust INDANGA.</p>
+                    </div>
+                    <button class="gateway-cta-btn">Get Started</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            <div class="container footer-columns-grid">
+                <div class="footer-brand-column">
+                    <h4 class="footer-logo"><i class="fa-solid fa-shapes"></i> INDANGA</h4>
+                    <p class="brand-pitch">Your all-in-one platform for homes, hotels, and car rentals in Rwanda.</p>
+                </div>
+                <div class="footer-nav-column">
+                    <h5>Quick Links</h5>
+                    <a href="#">Home</a>
+                    <a href="#">Explore</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-nav-column">
+                    <h5>Support</h5>
+                    <a href="#">Help Center</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">FAQs</a>
+                </div>
+                <div class="footer-nav-column">
+                    <h5>Follow Us</h5>
+                    <div class="social-icon-row">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-bottom-meta-row">
+                <p class="copyright-text">&copy; 2026 INDANGA. All rights reserved.</p>
+                <p class="origin-tag">Made with <span class="heart-icon">❤️</span> in Rwanda</p>
+            </div>
+        </footer>
+
+    </div>
+    <div class="auth-modal" id="authModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+        <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+        
+        <div class="modal-header-content">
+            <h3>Join <span class="highlight-gold">INDANGA</span></h3>
+            <p>Create your account to start exploring verified homes, hotels, and cars across Rwanda.</p>
+        </div>
+
+        <form class="modal-form" onsubmit="event.preventDefault();">
+            <div class="form-field-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="form-field-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="name@example.com" required>
+            </div>
+            <div class="form-field-group">
+                <label>Password</label>
+                <input type="password" placeholder="Create a secure password" required>
+            </div>
+            
+            <button type="submit" class="form-submit-btn modal-action-btn">Create Account</button>
+        </form>
+
+        <div class="modal-divider"><span>or toggle access</span></div>
+
+        <button class="btn-google-auth">
+            <img src="images/Google_logo.png" alt="Google Logo"> 
+            Continue with Google
+        </button>
+
+        <p class="modal-switch-text">Already have an account? <a href="#" class="switch-to-login-link">Login</a></p>
+    </div>
+</div>
+
+
+<div class="refer-earn-banner" style="grid-column: span 2; margin-top: 2rem;">
+    <div class="refer-content">
+        <h2>Refer & Earn</h2>
+        <p>Invite your friends and earn premium rewards on their next accommodation booking.</p>
+        <button class="btn-refer-action">Invite Friends</button>
+    </div>
+    <div class="refer-graphics">
+        <i class="fa-solid fa-gifts" style="font-size: 4rem; color: rgba(255,255,255,0.25);"></i>
+    </div>
+</div>
+
+        </div>
+
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
